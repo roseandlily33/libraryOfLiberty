@@ -2,14 +2,12 @@ let searchBtn= document.getElementById('searchInside');
 let backBtn = document.getElementById('back');
 let resultsCont = document.getElementById('resultsCont');
 
-
-
 function search(){
     let format = document.getElementById('format').value;
     let searchingFor = document.getElementById('searchingFor').value;
 
     let libraryURL = 'https://www.loc.gov/'+ format + '?q=' + searchingFor + '&fo=json';
-    //let libraryURL = "https://www.loc.gov/collections/world-war-i-sheet-music/?fo=json";
+
     fetch(libraryURL)
     .then(function(response){
        return response.json();
@@ -30,11 +28,10 @@ function displaySearch(data){
 
         let resultBody = document.createElement('div');
         resultBody.classList.add('divBody');
-
+//Slice gets rid of extra quotation marks:
         let titleEl = document.createElement('h3');
         titleEl.classList.add('titleEl');
         titleEl.textContent = JSON.stringify(data.results[i].title).slice(1, -1);
-        
         
         let dateEl = document.createElement('h3');
         dateEl.classList.add('dateEl');
@@ -53,7 +50,6 @@ function displaySearch(data){
         readMore.classList.add('readMoreBtn');
         readMore.src = JSON.stringify(data.results[i].url).slice(1, -1);
 
-
         resultBody.appendChild(titleEl);
         resultBody.appendChild(dateEl);
         resultBody.appendChild(subjectEl);
@@ -70,7 +66,6 @@ searchBtn.addEventListener('click', function(){
 })
 //Back Btn:
 backBtn.addEventListener('click', function(e){
-   // e.preventDefault();
-  // document.location.replace('./index.html');
+  document.location.replace('../index.html');
 
 })
