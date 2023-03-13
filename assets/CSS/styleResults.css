@@ -76,9 +76,52 @@ h2{
     margin: 0.5em;
     padding: 0.5em;
     border-radius: 10px;
+    height: 100%;
 }
 .divBody h3{
+    padding-block: 0.2em;
     font-size: 0.9em;
-    color: #0b253b;
+    
+}
+.titleEl{
+    font-weight: bold;
+    color: #d2d9e6;
+    font-size: 10em;
+    text-align: center;
+    text-decoration: underline;
 
+
+}
+.dateEl::before{
+    content: "Date: ";
+    font-weight: 700;
+    color: #d2d9e6;
+    font-size: 1.2em;
+}
+.subjectEl::before{
+    content: "Subject: ";
+    font-weight: 700;
+    color: #d2d9e6;
+    font-size: 1.2em;
+}
+.descEl::before{
+    font-weight: 700;
+    content: "Description: ";
+    color: #d2d9e6;
+    font-size: 1.2em;
+}
+.descEl{
+    font-size: 0.9em;
+}
+.readMoreBtn{
+    color: white;
+    background-color: #0b253b;
+    border: none;
+    padding: 1em;
+    border-radius: 25px;
+    margin-top: 0.5em;
+}
+.readMoreBtn:hover{
+    background-color: #c1daea;
+    color:#0b253b;
 }
