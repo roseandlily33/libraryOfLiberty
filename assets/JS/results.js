@@ -5,7 +5,6 @@ let resultsCont = document.getElementById('resultsCont');
 function search(){
     let format = document.getElementById('format').value;
     let searchingFor = document.getElementById('searchingFor').value;
-
     let libraryURL = 'https://www.loc.gov/'+ format + '?q=' + searchingFor + '&fo=json';
 
     fetch(libraryURL)
@@ -23,32 +22,36 @@ function displaySearch(data){
         resultsCont.innerHTML = 'No results found';
     }
     for(let i = 0; i < data.results.length; i++){
+       // console.log(data.results[i]);
         let resultDiv = document.createElement('div');
         resultDiv.classList.add('resultDiv');
 
         let resultBody = document.createElement('div');
         resultBody.classList.add('divBody');
-//Slice gets rid of extra quotation marks:
+       
         let titleEl = document.createElement('h3');
         titleEl.classList.add('titleEl');
-        titleEl.textContent = JSON.stringify(data.results[i].title).slice(1, -1);
+        titleEl.textContent = data.results[i].title;
+       
         
         let dateEl = document.createElement('h3');
         dateEl.classList.add('dateEl');
-        dateEl.textContent = JSON.stringify(data.results[i].date).slice(1, -1);
+        dateEl.textContent = data.results[i].date;
 
         let subjectEl = document.createElement('h3');
         subjectEl.classList.add('subjectEl');
-        subjectEl.textContent = JSON.stringify(data.results[i].partof).slice(1, -1);
+        subjectEl.textContent = data.results[i].partof;
+        
 
         let descEl = document.createElement('h4');
         descEl.classList.add('descEl');
-        descEl.textContent = JSON.stringify(data.results[i].description).slice(1, -1);
+        descEl.textContent = data.results[i]
+        descEl.textContent = data.results[i].description;
         
-        let readMore = document.createElement('button');
-        readMore.textContent = 'Read  More';
+        let readMore = document.createElement('a');
+        readMore.textContent = 'Read More';
         readMore.classList.add('readMoreBtn');
-        readMore.src = JSON.stringify(data.results[i].url).slice(1, -1);
+        readMore.setAttribute('href', data.results[i].url);
 
         resultBody.appendChild(titleEl);
         resultBody.appendChild(dateEl);

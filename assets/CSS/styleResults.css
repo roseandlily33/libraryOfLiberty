@@ -114,14 +114,5 @@ h2{
     font-size: 0.9em;
 }
 .readMoreBtn{
-    color: white;
-    background-color: #0b253b;
-    border: none;
-    padding: 1em;
-    border-radius: 25px;
-    margin-top: 0.5em;
-}
-.readMoreBtn:hover{
-    background-color: #c1daea;
-    color:#0b253b;
+   color: #802124;
 }

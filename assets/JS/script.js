@@ -1,5 +1,4 @@
 let submitForm = document.getElementById('search');
-let readMore = document.getElementsByClassName('readMoreBtn');
 
 submitForm.addEventListener('click', function(e){
     e.preventDefault();
@@ -22,7 +21,6 @@ submitForm.addEventListener('click', function(e){
     })
     .then(function(data){
         console.log(data);
-        displaySearch(data);
     }) });
 
 
