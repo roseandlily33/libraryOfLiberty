@@ -59,7 +59,6 @@ function displaySearch(data){
         resultsCont.appendChild(resultDiv);
     }
 }
-
 //Search Btn:
 searchBtn.addEventListener('click', function(){
     search();
@@ -67,5 +66,4 @@ searchBtn.addEventListener('click', function(){
 //Back Btn:
 backBtn.addEventListener('click', function(e){
   document.location.replace('../index.html');
-
 })
