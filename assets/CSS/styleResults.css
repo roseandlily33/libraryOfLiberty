@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #c1daea;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    padding: 3%;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    background-color: #4188ba;
+    margin-right: 2em;
+    border-radius: 2em;
+    height: 100vh;
+    padding: 1.3em;
+    gap: 1.2em;
+    border: 2px solid white;
+    width: 25%;
+}
+h2{
+    font-size: 1.5em;
+    color: white;
+    text-align: left;
+}
+/*Input fields */
+#searchingFor, #format{
+    padding: 0.5em;
+    border-radius: 5px;
+    border: none;
+
+}
+/* Buttons */
+#searchInside, #back{
+    color: white;
+    border: none;
+    padding: 0.8em;
+    border-radius: 15px;
+
+}
+#searchInside{
+    background-color: #5f9b62;
+}
+#back{
+    background-color: #d8585c;
+}
+#back::before{
+    content: '<< ';
+}
+.right{
+    border-radius: 2em;
+    padding: 1.3em;
+    width: 90%;
+    height: 100vh;
+    background-color: #4188ba;
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+}
+.right h1{
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+}
+#resultsCont{
+    overflow-y: scroll;
+    height: 90%;
+}
+.divBody{
+    border: 5px solid rgb(165, 214, 230);
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 10px;
+}
+.divBody h3{
+    font-size: 0.9em;
+    color: #0b253b;
+
+}

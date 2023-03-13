@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 15%;
+    background-color: #c1daea;
+}
+#container{
+    background-color: #4188ba;
+    border-radius: 20px;
+    padding: 4em;
+    height: 350px;
+    width: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid white;
+}
+#container h1{
+    font-size: 25px;
+    padding: 5px;
+    color: white;
+}
+#searchingFor, #format{
+    margin-block: 0.6em;
+    border: none;
+    padding: 0.5em;
+    border-radius: 5px;
+}
+#search{
+    background-color: #d8585c;
+    border: none;
+    padding: 10px 28px;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+
+}
