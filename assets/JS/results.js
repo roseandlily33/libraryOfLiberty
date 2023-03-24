@@ -6,7 +6,7 @@ let submitBtn = document.getElementById('searchOutside');
 function search(){
     let format = document.getElementById('format').value;
     let searchingFor = document.getElementById('searchingFor').value;
-     libraryURL = 'https://www.loc.gov/'+ format + '?q=' + searchingFor + '&fo=json';
+    let libraryURL = 'https://www.loc.gov/'+ format + '?q=' + searchingFor + '&fo=json';
      fetchData(libraryURL);
 }
 function fetchData(url){
@@ -75,7 +75,7 @@ backBtn.addEventListener('click', function(e){
 })
 submitBtn.addEventListener('click', function(){
     document.location.assign('assets/results.html');
-    libraryUrl = ('https://www.loc.gov/'+ format + '?q=' + searchingFor + '&fo=json');
+  //  libraryUrl = ('https://www.loc.gov/'+ format + '?q=' + searchingFor + '&fo=json');
     search();
 })
 
