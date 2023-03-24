@@ -1,14 +1,9 @@
 let searchBtn= document.getElementById('searchInside');
 let backBtn = document.getElementById('back');
 let resultsCont = document.getElementById('resultsCont');
-//
 let submitBtn = document.getElementById('search');
 
 function search(){
-    if(!searchingFor){
-        window.alert('You must enter a input for search');
-        return;
-    }  
     let format = document.getElementById('format').value;
     let searchingFor = document.getElementById('searchingFor').value;
      libraryURL = 'https://www.loc.gov/'+ format + '?q=' + searchingFor + '&fo=json';
@@ -80,7 +75,7 @@ backBtn.addEventListener('click', function(e){
 })
 submitBtn.addEventListener('click', function(){
     document.location.assign('assets/results.html');
-    search();
     libraryUrl = ('https://www.loc.gov/'+ format + '?q=' + searchingFor + '&fo=json');
+    search();
 })
 
