@@ -1,7 +1,7 @@
 let searchBtn= document.getElementById('searchInside');
 let backBtn = document.getElementById('back');
 let resultsCont = document.getElementById('resultsCont');
-let submitBtn = document.getElementById('search');
+let submitBtn = document.getElementById('searchOutside');
 
 function search(){
     let format = document.getElementById('format').value;
