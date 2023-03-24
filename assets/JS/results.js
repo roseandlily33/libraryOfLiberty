@@ -19,6 +19,7 @@ function fetchData(url){
         displaySearch(data);
     })
 }
+
 function displaySearch(data){
     resultsCont.textContent = " ";
     if(data.results.length === 0){
