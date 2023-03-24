@@ -1,4 +1,6 @@
-let submitForm = document.getElementById('searchBtn');
+import {search} from "./JS/results.js";
+
+let submitForm = document.getElementById('search');
 
 submitForm.addEventListener('click', function(e){
     e.preventDefault();
@@ -12,6 +14,7 @@ submitForm.addEventListener('click', function(e){
     }  
     document.location.assign('assets/results.html');
     libraryUrl = ('https://www.loc.gov/'+ format + '?q=' + searchingFor + '&fo=json');
+    search();
     }) 
 
 

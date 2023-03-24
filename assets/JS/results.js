@@ -73,3 +73,6 @@ searchBtn.addEventListener('click', function(){
 backBtn.addEventListener('click', function(e){
   document.location.replace('../index.html');
 })
+
+//Export search:
+export {search};
