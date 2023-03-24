@@ -2,12 +2,15 @@ let searchBtn= document.getElementById('searchInside');
 let backBtn = document.getElementById('back');
 let resultsCont = document.getElementById('resultsCont');
 
+
 function search(){
     let format = document.getElementById('format').value;
     let searchingFor = document.getElementById('searchingFor').value;
-    let libraryURL = 'https://www.loc.gov/'+ format + '?q=' + searchingFor + '&fo=json';
-
-    fetch(libraryURL)
+     libraryURL = 'https://www.loc.gov/'+ format + '?q=' + searchingFor + '&fo=json';
+     fetchData(libraryURL);
+}
+function fetchData(url){
+     fetch(url)
     .then(function(response){
        return response.json();
     })

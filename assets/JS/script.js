@@ -1,4 +1,4 @@
-let submitForm = document.getElementById('search');
+let submitForm = document.getElementById('searchBtn');
 
 submitForm.addEventListener('click', function(e){
     e.preventDefault();
@@ -11,16 +11,7 @@ submitForm.addEventListener('click', function(e){
         return;
     }  
     document.location.assign('assets/results.html');
-    console.log(e);
-
-    let libraryURL = 'https://www.loc.gov/'+ format + '?q=' + searchingFor + '&fo=json';
-
-    fetch(libraryURL)
-    .then(function(response){
-       return response.json();
-    })
-    .then(function(data){
-        console.log(data);
-    }) });
+    libraryUrl = ('https://www.loc.gov/'+ format + '?q=' + searchingFor + '&fo=json');
+    }) 
 
 
