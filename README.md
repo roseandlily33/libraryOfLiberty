@@ -8,7 +8,9 @@ To make a website that takes data from a API and displays it on the screen based
 Coming Soon
 
 ## Screenshots:
-Coming Soon
+![Screenshot 2023-03-13 at 1 37 50 PM](https://user-images.githubusercontent.com/109821108/227598827-888dbcf3-b529-4dd1-b0de-01246eb99a3c.png)
+![Screenshot 2023-03-13 at 3 51 05 PM](https://user-images.githubusercontent.com/109821108/227598828-eef0da3b-e0b2-472b-a630-010b3d19457e.png)
+
 
 ## Difficutlies:
 This was the first project that I've done that has been a 2 page thing, so learning how to do that took a minute. And then there always a learning curve with whatever API your using. I had a little trouble getting this one to work for me and to display the results.
