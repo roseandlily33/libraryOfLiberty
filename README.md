@@ -12,10 +12,8 @@ Coming Soon
 ![Screenshot 2023-03-13 at 3 51 05 PM](https://user-images.githubusercontent.com/109821108/227598828-eef0da3b-e0b2-472b-a630-010b3d19457e.png)
 
 
-## Difficutlies:
-This was the first project that I've done that has been a 2 page thing, so learning how to do that took a minute. And then there always a learning curve with whatever API your using. I had a little trouble getting this one to work for me and to display the results.
-
-## Succeses:
+## Difficulties:
+This project was overall not too difficult, the main difficulty was that (and still is) the main page, I tried so many things to try and get this to take it from one page transfer it to the next and display the data and for some reason that no one knows why .addEventListener was the issue, and I checked 800 times, made sure everything was the name it was supposed to be but still no luck. But it does work and displays results based on what you type in. 
 
 
 ## Things I would do different:
