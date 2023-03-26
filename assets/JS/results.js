@@ -4,10 +4,10 @@ let resultsCont = document.getElementById('resultsCont');
 let submitBtn = document.getElementById('searchOutside');
 
 function search(){
-    let format = document.getElementById('format').value;
-    let searchingFor = document.getElementById('searchingFor').value;
-    let libraryURL = 'https://www.loc.gov/'+ format + '?q=' + searchingFor + '&fo=json';
-     fetchData(libraryURL);
+    let format = document.getElementById('formatInside').value;
+    let searchingFor = document.getElementById('inputInside').value;
+    libraryURL = 'https://www.loc.gov/'+ format + '?q=' + searchingFor + '&fo=json';
+    fetchData(libraryURL);
 }
 function fetchData(url){
      fetch(url)
@@ -46,10 +46,9 @@ function displaySearch(data){
         subjectEl.classList.add('subjectEl');
         subjectEl.textContent = data.results[i].partof;
         
-
         let descEl = document.createElement('h4');
         descEl.classList.add('descEl');
-        descEl.textContent = data.results[i]
+        descEl.textContent = data.results[i];
         descEl.textContent = data.results[i].description;
         
         let readMore = document.createElement('a');
@@ -66,17 +65,28 @@ function displaySearch(data){
         resultsCont.appendChild(resultDiv);
     }
 }
-//Search Btn:
+//Search Btn on inner HTML:
 searchBtn.addEventListener('click', function(){
+    console.log('inner button');
     search();
+    console.log('inner btn 2');
 })
-//Back Btn:
-backBtn.addEventListener('click', function(e){
-  document.location.replace('../index.html');
-})
-submitBtn.addEventListener('click', function(){
-    document.location.assign('assets/results.html');
-  //  libraryUrl = ('https://www.loc.gov/'+ format + '?q=' + searchingFor + '&fo=json');
-    search();
-})
+//Back Btn on inner HTML:
+//backBtn.addEventListener('click', function(){
+ // document.location.replace('../index.html');
+//})
+//Search Btn on outer HTML:
+//submitBtn.addEventListener('click', function(e){
+  //  e.preventDefault();
+   // console.log('Outer btn');
+    //let formatOut = document.getElementById('formatOutside').value;
+    //let searchOut = document.getElementById('inputOutside').value;
+   // document.location.assign('assets/results.html');
+ //   document.location.replace('/assets/results.html');
+   // console.log('after document')
+    //let libraryUrl = ('https://www.loc.gov/'+ formatOut + '?q=' + searchOut + '&fo=json');
+    //console.log('after set url')
+   // fetchData(libraryUrl);
+    //console.log('after fetch')
+//})
 

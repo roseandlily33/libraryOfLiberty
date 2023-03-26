@@ -29,7 +29,7 @@ h2{
     text-align: left;
 }
 /*Input fields */
-#searchingFor, #format{
+#inputInside, #formatInside{
     padding: 0.5em;
     border-radius: 5px;
     border: none;
